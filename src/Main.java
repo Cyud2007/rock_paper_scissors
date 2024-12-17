@@ -31,18 +31,12 @@ public class Main {
 
             // Choosing a computer
             int computerRandom = random.nextInt(3); // 0, 1 или 2
-            String computerChoice = "";
-            switch (computerRandom) {
-                case 0:
-                    computerChoice = "rock";
-                    break;
-                case 1:
-                    computerChoice = "scissors";
-                    break;
-                case 2:
-                    computerChoice = "paper";
-                    break;
-            }
+            String computerChoice = switch (computerRandom) {
+                case 0 -> "rock";
+                case 1 -> "scissors";
+                case 2 -> "paper";
+                default -> "";
+            };
 
             System.out.println("The computer chose: " + computerChoice);
 

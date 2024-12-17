@@ -13,7 +13,7 @@ public class Main {
         System.out.println("Enter 'Rock', 'Scissors' or 'Paper'. To exit, enter 'Exit'.");
 
         while (true) {
-            // Ввод пользователя
+            // User Input
             System.out.print("Your choice: ");
             String playerChoice = scanner.nextLine().toLowerCase();
 
@@ -23,13 +23,13 @@ public class Main {
                 break;
             }
 
-            // Проверка корректности ввода
+            // Checking the correctness of the input
             if (!playerChoice.equals("rock") && !playerChoice.equals("scissors") && !playerChoice.equals("paper")) {
                 System.out.println("Incorrect entry! Try again.");
                 continue;
             }
 
-            // Выбор компьютера
+            // Choosing a computer
             int computerRandom = random.nextInt(3); // 0, 1 или 2
             String computerChoice = "";
             switch (computerRandom) {
@@ -46,7 +46,7 @@ public class Main {
 
             System.out.println("The computer chose: " + computerChoice);
 
-            // Определение победителя
+            // Determining the winner
             if (playerChoice.equals(computerChoice)) {
                 System.out.println("It's a tie!");
             } else if ((playerChoice.equals("rock") && computerChoice.equals("scissors")) ||
@@ -59,7 +59,7 @@ public class Main {
                 computerScore++;
             }
 
-            // Показ текущего счёта
+            // Show current account
             System.out.println("Score: You " + playerScore + " - Computer " + computerScore);
             System.out.println("------------------------------------");
         }
